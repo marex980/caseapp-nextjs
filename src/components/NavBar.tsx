@@ -1,5 +1,6 @@
 import MaxWidthWrapper from './MaxWidthWrapper'
 import Link from 'next/link'
+import { buttonVariants } from './ui/button'
 
 
 const Navbar =  () => {
@@ -14,8 +15,14 @@ const Navbar =  () => {
           <div className='h-full flex items-center space-x-4'>
                 {user ? (
                     <>
+                <Link
+                    href='/api/auth/logout'
+                    className={buttonVariants({
+                     size: 'sm',
+                     variant: 'ghost',
+                  })}></Link>
                     </>
-                )}
+                )} 
           </div>
           </div>
             </MaxWidthWrapper>
